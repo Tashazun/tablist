@@ -9,27 +9,42 @@
 </head>
 <body>
   <div class="app">
-    <div class="item item1">
-      <p class="title">Fit Guide</p>
-      <img src="plus.svg" class="plus" alt="" />
-    </div>
-    <div class="panel panel1 hidden">
+    <h2 class="item item1">
+      <button class="title" aria-expanded="false">
+        Fit Guide
+        <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+          <rect class="vert" height="8" width="2" y="1" x="4" />
+          <rect height="2" width="8" y="4" x="1" />
+        </svg>
+      </button>
+    </h2>
+    <div class="panel panel1" hidden>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin enim
       massa, iaculis sodales sem a, efficitur pharetra nisl. Vestibulum lorem
       eros, tempor condimentum pellentesque id, pretium et mauris.
     </div>
 
-    <div class="item item2">
-      <p class="title">Care</p>
-      <img src="plus.svg" class="plus" alt="" />
-    </div>
-    <div class="panel panel2 hidden">This is the other panel</div>
+    <h2 class="item item2">
+      <button class="title" aria-expanded="false">
+        Care
+        <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+          <rect class="vert" height="8" width="2" y="1" x="4" />
+          <rect height="2" width="8" y="4" x="1" />
+        </svg>
+      </button>
+    </h2>
+    <div class="panel panel2" hidden>This is the other panel</div>
 
-    <div class="item item3">
-      <p class="title">Material</p>
-      <img src="plus.svg" class="plus" alt="" />
-    </div>
-    <div class="panel panel3 hidden">This is the last panel</div>
+    <h2 class="item item3">
+      <button class="title" aria-expanded="false">
+        Material
+        <svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+          <rect class="vert" height="8" width="2" y="1" x="4" />
+          <rect height="2" width="8" y="4" x="1" />
+        </svg>
+      </button>
+    </h2>
+    <div class="panel panel3" hidden>This is the last panel</div>
   </div>
     <script src="./index.js"></script>
 </body>

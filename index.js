@@ -1,15 +1,26 @@
-
 const tabs = document.querySelectorAll(".item");
 
 tabs.forEach((item) => {
-  item.addEventListener("click", (event) => {
-    let nextSibling = item.nextElementSibling;
-    if (nextSibling.classList.contains("hidden")) {
-      nextSibling.classList.remove("hidden");
-      item.style.border = "none";
-    } else {
-      nextSibling.classList.add("hidden");
+  let btn = item.querySelector("button");
+  let target = item.nextElementSibling;
+
+  btn.onclick = () => {
+    const otherTabs = [...tabs].filter((tab) => tab !== item);
+    otherTabs.forEach((x) => {
+      let outerBtn = x.querySelector("button");
+      let outerTarget = x.nextElementSibling;
+
+      outerBtn.setAttribute("aria-expanded", false);
+      outerTarget.hidden = true;
+    });
+    let expanded = btn.getAttribute("aria-expanded") === "true" || false;
+    btn.setAttribute("aria-expanded", !expanded);
+    target.hidden = expanded;
+
+    if (target.hidden === true) {
       item.style.borderBottom = "1px solid black";
+    } else {
+      item.style.border = "none";
     }
-  });
+  };
 });
